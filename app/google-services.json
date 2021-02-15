@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "507342694022",
+    "firebase_url": "https://smartbettingtips.firebaseio.com",
+    "project_id": "smartbettingtips",
+    "storage_bucket": "smartbettingtips.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507342694022:android:65dab86726cd5912",
+        "android_client_info": {
+          "package_name": "com.simonepirozzi.smartbettingtips"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507342694022-c3sh5u99uqn19d5c9fbho562u0qgmbf1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simonepirozzi.smartbettingtips",
+            "certificate_hash": "9af0fea83ee0aa847eb5f19afd09b0e50586435c"
+          }
+        },
+        {
+          "client_id": "507342694022-brsju6uuhfgolh8n26ebr6t25l97qg5e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQcu_85BIBWAYNkfE_i92VTva01Zj8tfA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507342694022-brsju6uuhfgolh8n26ebr6t25l97qg5e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
