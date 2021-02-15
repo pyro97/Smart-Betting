@@ -21,7 +21,10 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
+
     </LinearLayout>
+
+
 
 
     <FrameLayout
@@ -29,6 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
         >
+
 
         <ListView
             android:layout_marginLeft="10dp"
@@ -41,6 +45,8 @@
         </ListView>
 
     </FrameLayout>
+
+
 
 
 </LinearLayout>

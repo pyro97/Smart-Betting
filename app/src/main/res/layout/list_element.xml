@@ -18,8 +18,8 @@
 
 
         <LinearLayout
+            android:id="@+id/bannerLayout"
             android:layout_width="match_parent"
-
             android:layout_height="30dp"
             android:background="#8B0000"
             android:orientation="horizontal">

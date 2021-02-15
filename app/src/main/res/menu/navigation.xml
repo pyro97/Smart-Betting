@@ -12,11 +12,6 @@
         android:title="Old Tips" />
 
     <item
-        android:id="@+id/navigation_premium"
-        android:icon="@drawable/ic_star"
-        android:title="Premium Tips" />
-
-    <item
         android:id="@+id/navigation_info"
         android:icon="@drawable/ic_info"
         android:title="Info" />

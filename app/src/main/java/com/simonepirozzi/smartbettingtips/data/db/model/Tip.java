@@ -1,12 +1,10 @@
-package com.simonepirozzi.smartbettingtips;
+package com.simonepirozzi.smartbettingtips.data.db.model;
 
 public class Tip {
 
-    String giorno,orario,tip,stato,casa,trasferta,fotoC,fotoT,league,pagina,golC,golT;
+    String giorno, orario, tip, stato, casa, trasferta, fotoC, fotoT, league, pagina, golC, golT;
 
-    public Tip(){
-
-    }
+    public Tip() { }
 
     public String getPagina() {
         return pagina;
@@ -33,19 +31,19 @@ public class Tip {
     }
 
     public Tip(String giorno, String orario, String tip, String stato,
-               String league, String casa, String trasferta, String fotoC, String fotoT, String pagina, String golC, String golT ){
-        this.giorno=giorno;
-        this.orario=orario;
-        this.tip=tip;
-        this.stato=stato;
-        this.casa=casa;
-        this.trasferta=trasferta;
-        this.fotoC=fotoC;
-        this.fotoT=fotoT;
-        this.league=league;
-        this.pagina=pagina;
-        this.golC=golC;
-        this.golT=golT;
+               String league, String casa, String trasferta, String fotoC, String fotoT, String pagina, String golC, String golT) {
+        this.giorno = giorno;
+        this.orario = orario;
+        this.tip = tip;
+        this.stato = stato;
+        this.casa = casa;
+        this.trasferta = trasferta;
+        this.fotoC = fotoC;
+        this.fotoT = fotoT;
+        this.league = league;
+        this.pagina = pagina;
+        this.golC = golC;
+        this.golT = golT;
     }
 
 
