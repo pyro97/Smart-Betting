@@ -17,21 +17,25 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
-public class HomePagePresenter implements HomePageContract {
+public class HomePagePresenter implements HomePageContract.Presenter {
 
     private Context context;
     private CustomAdapter customAdapter;
     private FirebaseFirestore db;
+    private HomePageContract.View mView;
 
 
-    public HomePagePresenter(Context context, CustomAdapter customAdapter, FirebaseFirestore db) {
+
+    public HomePagePresenter(Context context, CustomAdapter customAdapter, FirebaseFirestore db, HomePageContract.View view) {
         this.context = context;
         this.customAdapter = customAdapter;
         this.db = db;
+        this.mView = view;
     }
 
     @Override
     public void getTips(String page) {
+        mView.showProgressBr();
         db.collection(Constants.COLLECTION_PATH).whereEqualTo(Constants.COLLECTION_PAGE, page).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(Task<QuerySnapshot> task) {
@@ -60,6 +64,7 @@ public class HomePagePresenter implements HomePageContract {
                     customAdapter.add(completedList.get(j));
                 }
                 customAdapter.notifyDataSetChanged();
+                mView.hideProgressBar();
             }
         });
     }

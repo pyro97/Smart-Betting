@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private ScheduledExecutorService scheduler;
     private boolean isVisible;
     private MainActivityPresenter mPresenter;
-    private static final int time1=30 , time2=30;
+    private static final int time1 = 30, time2 = 30;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +34,8 @@ public class MainActivity extends AppCompatActivity {
         mPresenter = new MainActivityPresenter(this);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         FirebaseApp.initializeApp(getApplicationContext());
-
-            mPresenter.initializeBanner();
-            mInterstitialAd = mPresenter.initializeInterstitial();
-
-
+        mPresenter.initializeBanner();
+        mInterstitialAd = mPresenter.initializeInterstitial();
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         getFragmentManager().beginTransaction().replace(R.id.contenitore, new HomeFragment()).commit();
 
@@ -46,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onStart() {
         super.onStart();
-            createScheduler();
+        createScheduler();
     }
 
     @Override

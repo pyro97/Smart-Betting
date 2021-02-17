@@ -1,7 +1,6 @@
 package com.simonepirozzi.smartbettingtips.ui.common.adapter;
 
 import android.content.Context;
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.simonepirozzi.smartbettingtips.R;
 import com.simonepirozzi.smartbettingtips.data.db.model.Tip;
-import com.simonepirozzi.smartbettingtips.utils.StatusMatchEnum;
 import com.squareup.picasso.Picasso;
 import java.util.List;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -26,14 +24,12 @@ public class CustomAdapter extends ArrayAdapter<Tip> {
     private TextView data, orario, nomeC, nomeT, consiglio, golCasa, golTra;
     private LinearLayout banner;
     private AppCompatImageView fotoC, fotoT, risultato;
-    private boolean isPremium ;
     private Context context;
 
-    public CustomAdapter(Context context, int resource, List<Tip> objects, boolean isPremium) {
+    public CustomAdapter(Context context, int resource, List<Tip> objects) {
         super(context, resource, objects);
         this.context = context;
         this.resource = resource;
-        this.isPremium = isPremium;
         inflater = LayoutInflater.from(context);
     }
 
@@ -54,11 +50,6 @@ public class CustomAdapter extends ArrayAdapter<Tip> {
         golCasa = v.findViewById(R.id.golC);
         golTra = v.findViewById(R.id.golT);
         banner = v.findViewById(R.id.bannerLayout);
-        if(isPremium){
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                banner.setBackgroundColor(context.getColor(R.color.colorGold));
-            }
-        }
         data.setText(tip.getGiorno() + " - " + tip.getLeague());
         orario.setText(tip.getOrario());
         nomeC.setText(tip.getCasa());

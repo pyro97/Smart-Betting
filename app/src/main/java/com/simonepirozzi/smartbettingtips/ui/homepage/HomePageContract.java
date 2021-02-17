@@ -1,7 +1,13 @@
 package com.simonepirozzi.smartbettingtips.ui.homepage;
 
-import com.simonepirozzi.smartbettingtips.ui.common.contract.ViewContract;
+public class HomePageContract {
 
-public interface HomePageContract {
-    void getTips(String page);
+    public interface View {
+        void showProgressBr();
+        void hideProgressBar();
+    }
+
+    interface Presenter{
+        void getTips(String page);
+    }
 }

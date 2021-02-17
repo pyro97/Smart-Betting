@@ -2,8 +2,6 @@ package com.simonepirozzi.smartbettingtips.ui.main;
 
 import android.content.Context;
 
-import com.anjlab.android.iab.v3.BillingProcessor;
-import com.anjlab.android.iab.v3.TransactionDetails;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
