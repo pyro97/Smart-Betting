@@ -21,9 +21,9 @@ public class CustomAdapter extends ArrayAdapter<Tip> {
     private int resource;
     private LayoutInflater inflater;
     private Tip tip;
-    private TextView data, orario, nomeC, nomeT, consiglio, golCasa, golTra;
+    private TextView date, time, home, away, tipText, golHome, golAway;
     private LinearLayout banner;
-    private AppCompatImageView fotoC, fotoT, risultato;
+    private AppCompatImageView photoHome, photoAway, result;
     private Context context;
 
     public CustomAdapter(Context context, int resource, List<Tip> objects) {
@@ -39,47 +39,47 @@ public class CustomAdapter extends ArrayAdapter<Tip> {
             v = inflater.inflate(R.layout.list_element, null);
         }
         tip = getItem(position);
-        data = v.findViewById(R.id.data);
-        orario = v.findViewById(R.id.orario);
-        nomeC = v.findViewById(R.id.nomeC);
-        nomeT = v.findViewById(R.id.nomeT);
-        consiglio = v.findViewById(R.id.tip);
-        fotoC = v.findViewById(R.id.fotoC);
-        fotoT = v.findViewById(R.id.fotoT);
-        risultato = v.findViewById(R.id.risultato);
-        golCasa = v.findViewById(R.id.golC);
-        golTra = v.findViewById(R.id.golT);
+        date = v.findViewById(R.id.date);
+        time = v.findViewById(R.id.time);
+        home = v.findViewById(R.id.home);
+        away = v.findViewById(R.id.away);
+        tipText = v.findViewById(R.id.tip);
+        photoHome = v.findViewById(R.id.photoHome);
+        photoAway = v.findViewById(R.id.photoAway);
+        result = v.findViewById(R.id.result);
+        golHome = v.findViewById(R.id.golHome);
+        golAway = v.findViewById(R.id.golAway);
         banner = v.findViewById(R.id.bannerLayout);
-        data.setText(tip.getGiorno() + " - " + tip.getLeague());
-        orario.setText(tip.getOrario());
-        nomeC.setText(tip.getCasa());
-        nomeT.setText(tip.getTrasferta());
-        consiglio.setText(tip.getTip());
-        golCasa.setText(tip.getGolC());
-        golTra.setText(tip.getGolT());
+        date.setText(tip.getDay() + " - " + tip.getLeague());
+        time.setText(tip.getTime());
+        home.setText(tip.getHome());
+        away.setText(tip.getAway());
+        tipText.setText(tip.getTip());
+        golHome.setText(tip.getGolHome());
+        golAway.setText(tip.getGolAway());
 
-        Picasso.get().load(tip.getFotoC()).into(fotoC);
-        Picasso.get().load(tip.getFotoT()).into(fotoT);
+        Picasso.get().load(tip.getPhotoHome()).into(photoHome);
+        Picasso.get().load(tip.getGolAway()).into(photoAway);
 
-        switch (tip.getStato()){
+        switch (tip.getState()){
             case STATUS_LOADING:
-                risultato.setImageDrawable(v.getResources().getDrawable(R.drawable.ic_action_name));
+                result.setImageDrawable(v.getResources().getDrawable(R.drawable.ic_action_name));
                 break;
             case STATUS_LOSE:
-                risultato.setImageDrawable(v.getResources().getDrawable(R.drawable.ic_action_canc));
+                result.setImageDrawable(v.getResources().getDrawable(R.drawable.ic_action_canc));
                 break;
             case STATUS_WIN:
-                risultato.setImageDrawable(v.getResources().getDrawable(R.drawable.ic_action_ok));
+                result.setImageDrawable(v.getResources().getDrawable(R.drawable.ic_action_ok));
                 break;
         }
 
-        data.setTag(position);
-        orario.setTag(position);
-        nomeC.setTag(position);
-        nomeT.setTag(position);
-        consiglio.setTag(position);
-        fotoC.setTag(position);
-        fotoT.setTag(position);
+        date.setTag(position);
+        time.setTag(position);
+        home.setTag(position);
+        away.setTag(position);
+        tipText.setTag(position);
+        photoHome.setTag(position);
+        photoAway.setTag(position);
 
         return v;
     }

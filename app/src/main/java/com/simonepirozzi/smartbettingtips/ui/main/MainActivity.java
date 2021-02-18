@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         mPresenter.initializeBanner();
         mInterstitialAd = mPresenter.initializeInterstitial();
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        getFragmentManager().beginTransaction().replace(R.id.contenitore, new HomeFragment()).commit();
+        getFragmentManager().beginTransaction().replace(R.id.containerFrame, new HomeFragment()).commit();
 
     }
 
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
             if (fragment != null) {
-                getFragmentManager().beginTransaction().replace(R.id.contenitore, fragment).commit();
+                getFragmentManager().beginTransaction().replace(R.id.containerFrame, fragment).commit();
             }
             return true;
         }
