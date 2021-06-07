@@ -15,7 +15,7 @@ Google Play: https://bit.ly/2TRR99r
 
 
 #### This is a MVC Java Project
-- I used 
+- I used FirebaseFirestore to manage tips data and update these every week
 - I used Google Mobile Ads to show banner and interstitial
 
 <br>
