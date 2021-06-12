@@ -14,7 +14,7 @@ Google Play: https://bit.ly/2TRR99r
 3. **utils**: Utility classes.
 
 
-#### This is a MVC Java Project
+#### This is a MVP Java Project
 - I used FirebaseFirestore to manage tips data and update these every week
 - I used Google Mobile Ads to show banner and interstitial
 
